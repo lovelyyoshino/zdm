@@ -8,7 +8,7 @@
 
 # 运行
 
-[](https://cloud.tencent.com/developer/article/2200768)
+[https://cloud.tencent.com/developer/article/2200768](https://cloud.tencent.com/developer/article/2200768)
 
 *  fork本仓库
 *  新增Actions secrets
