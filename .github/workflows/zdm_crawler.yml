@@ -3,7 +3,7 @@ name: zdm_crawler
 on:
   #将下面两行代码取消注释
   schedule:
-    - cron: "0/10 * * * *"
+    - cron: "0/20 * * * *"
   workflow_dispatch:
 
 jobs:
@@ -24,7 +24,7 @@ jobs:
     - name: main logic
       env:
         # 点值的数量>minVoted,才会被推送,填0为都推送
-        minVoted: 0
+        minVoted: 1
         # 评论的数量>minComments,才会被推送,填0为都推送
         minComments: 0
         # 优惠信息数量>MIN_PUSH_SIZE就会发邮件,否则积累到下一次触发任务再决定是否推送. 不建议填太小的数字,避免邮件太多了
@@ -44,7 +44,7 @@ jobs:
     - name: commit & push
       uses: actions-go/push@master
       with:
-        author-email: 'actions@github.com'
-        author-name: 'GitHub Actions'
+        author-email: 'mpl9725440@github.com'
+        author-name: 'lovelyyoshino'
         commit-message: 'update articles'
         token: ${{ secrets.GIT_TOKEN }}
